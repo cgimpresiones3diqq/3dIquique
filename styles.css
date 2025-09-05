@@ -41,6 +41,73 @@ body::before {
   /* Eliminado: no se necesita */
 /*}*/
 
+/* Contenedor flexible para el encabezado */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px -20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Logo */
+.site-logo {
+  height: 60px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  
+}
+
+.site-logo:hover {
+  transform: scale(1.03);
+}
+
+/* Botones en el header */
+.btn-email,
+.btn-ideas {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-email {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-email:hover {
+  background-color: #388E3C;
+  transform: translateY(-2px);
+}
+
+.btn-ideas {
+  background-color: #FF9800;
+  color: white;
+}
+
+.btn-ideas:hover {
+  background-color: #F57C00;
+  transform: translateY(-2px);
+}
+
+
 /* Encabezado */
 header {
   text-align: center;
@@ -435,4 +502,44 @@ footer {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Responsive: En pantallas pequeñas, los botones se acomodan */
+@media (max-width: 768px) {
+  .header-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header-right {
+    margin-left: auto;
+  }
+
+  .btn-email,
+  .btn-ideas {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    min-width: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-email,
+  .btn-ideas {
+    display: block;
+    margin: 0.5rem auto;
+    width: 80%;
+    max-width: 200px;
+  }
 }
