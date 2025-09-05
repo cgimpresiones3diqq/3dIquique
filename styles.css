@@ -1,0 +1,438 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Fondo principal - Asegúrate de que 'fondo.jpg' esté en la misma carpeta */
+body {
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  background: url('3D-Printer.jpg') no-repeat center center fixed;
+  /*background-size: cover; /* Mejor que 100% 100% */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: 100% 100%;
+}
+
+/* Fondo de respaldo en caso de que 'fondo.jpg' no cargue */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background: rgba(7, 179, 204, 0.7); /* Celeste profesional como respaldo */
+  z-index: -1;
+}
+
+/* Overlay para mejorar legibilidad */
+/* Eliminar completamente el overlay */
+/*.overlay {*/
+  /* Eliminado: no se necesita */
+/*}*/
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1{
+  margin-bottom: 0;
+  font-size:2.5rem;
+  color: #40E0D0;
+}
+
+/* Contenedor del encabezado */
+.header-content {
+  position: relative;
+  left: -300px; /* Ajusta este valor para moverlo más o menos */
+  display: flex;
+  justify-content: flex-start;
+  padding: -5px 5px;
+}
+
+/* Estilo del logo */
+.site-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+/* Efecto al pasar el mouse */
+.site-logo:hover {
+  transform: scale(1.5);
+}
+
+
+header p {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+
+
+/* Contenedor */
+.container {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 0 10px;
+}
+
+/* Secciones */
+.section {
+  padding: 3rem 0;
+  
+}
+
+.section h2 {
+  text-align: center;
+  font-size:3rem;
+  color:#40E0D0;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Grid de secciones */
+.grid-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(0px);
+}
+
+.grid-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.grid-item h3 {
+  color: #40E0D0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.grid-item li {
+  margin: 0.5rem 0;
+  color: #40E0D0;
+  line-height: 1.6;
+}
+
+/* Botón de acordeón */
+.accordion-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(89, 158, 170, 0.267);
+  color: #40E0D0;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.accordion-content {
+  display: none;
+  color: #40E0D0;
+  line-height: 1.6;
+}
+
+.accordion-content.show {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(0px);
+}
+
+.product-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.product-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-info h3 {
+  font-size: 1.4rem;
+  color: #40E0D0;
+  margin-bottom: 0.8rem;
+}
+
+.product-info p {
+  color: #40E0D0;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.1rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;
+}
+
+/* Testimonios */
+.testimonials {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.testimonials:hover {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #40E0D0;
+}
+
+/* Privacidad */
+.privacy-box {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.privacy-box:hover {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.privacy-box h3 {
+  color: #40E0D0;
+  margin-bottom: 1rem;
+}
+
+/* Popup de producto */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Fondo oscuro limpio */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  position: relative;
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: visible; /* Permite que el botón salga del contenedor si es necesario */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.popup-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: white;
+}
+
+.popup-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  z-index: 1;
+  position: relative;
+}
+
+.popup-image.zoomed {
+  transform: scale(2);
+  cursor: zoom-out;
+  z-index: 2;
+}
+
+.popup-content {
+  padding: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.popup-content h3 {
+  font-size: 1.4rem;
+  color: #40E0D0;
+  margin-bottom: 0.8rem;
+}
+
+/* Botón de cerrar - Siempre visible */
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.8rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000; /* Siempre arriba */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.popup-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Popup de bienvenida */
+#welcomePopup .popup {
+  background: white;
+  color: #333;
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  animation: fadeIn 0.4s ease;
+}
+
+#welcomePopup h3 {
+  color: #075E54;
+  margin-bottom: 1rem;
+}
+
+#welcomePopup p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.whatsapp-float a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #40E0D0;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

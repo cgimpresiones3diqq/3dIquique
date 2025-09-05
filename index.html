@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CG Impresiones | Impresión 3D Profesional</title>
+  <meta name="description" content="Servicios de impresión 3D con calidad, privacidad y entrega rápida. Cotiza por WhatsApp.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <!-- Overlay para mejorar legibilidad sobre fondo -->
+  
+
+
+
+
+    <!-- Encabezado -->
+    <header>
+      <div class="container">
+        <h1>Impresión 3D de alta calidad | Iquique, Chile</h1>
+        
+        <div class="header-content">
+        <img src="logoCG.png" alt="Logo CG Impresiones" class="site-logo">
+        </div>
+        
+      </div>
+    </header>
+
+    <!-- Secciones en acordeón -->
+    <section class="section">
+      <div class="container">
+        <h2>¿Cómo Funciona? Y Materiales de Calidad</h2>
+        <div class="grid-container">
+
+          <div class="grid-item">
+            <h3>¿Cómo Funciona?</h3>
+            <button class="accordion-btn" onclick="toggleAccordion('proceso')">Mostrar más</button>
+            <div id="proceso" class="accordion-content">
+              <ol>
+                <li><strong>Envía tu archivo 3D o Idea</strong> por WhatsApp.</li>
+                <li><strong>Recibe cotización en 24h</strong> con material, precio y tiempo.</li>
+                <li><strong>Imprimimos con precisión</strong> y enviamos fotos del proceso.</li>
+                <li><strong>Entrega rápida</strong> en Iquique.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <h3>Materiales de Calidad</h3>
+            <button class="accordion-btn" onclick="toggleAccordion('materiales')">Mostrar más</button>
+            <div id="materiales" class="accordion-content">
+              <ul>
+                <li>🔹 <strong>PLA</strong> – Modelos, diseño y piezas decorativas.</li>
+                <li>🔹 <strong>ABS</strong> – Resistente al calor y al desgaste.</li>
+                <li>🔹 <strong>PETG</strong> – Transparente y duradero.</li>
+                <li>🔹 <strong>Resina</strong> – Detalles ultrafinos para maquetas o joyería.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="section">
+      <div class="container">
+        <h2>Últimos Trabajos</h2>
+        <div class="gallery">
+          <div class="product-card">
+            <img src="Funkos.png" alt="Funko impreso en 3D" class="product-img" onclick="openPopup('Funkos.png', 'Funko Personalizado', 'Figura impresa en PLA. Ideal para regalos o colecciones.')">
+            <div class="product-info">
+              <h3>Funko Personalizado</h3>
+              <p>Diseños únicos basados en personajes o fotos.</p>
+              <a href="https://wa.me/56938732378?text=Hola,%20me%20interesa%20un%20Funko%20personalizado." class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="llaveromoto.jpg" alt="Llavero de moto" class="product-img" onclick="openPopup('llaveromoto.jpg', 'Llavero de Moto', 'Llavero impreso en PLA resistente. Perfecto como regalo.')">
+            <div class="product-info">
+              <h3>Llavero de Moto</h3>
+              <p>Diseño personalizado para motociclistas.</p>
+              <a href="https://wa.me/56938732378?text=Hola,%20me%20interesa%20un%20llavero%20de%20moto." class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="macetero3D.png" alt="Macetero 3D" class="product-img" onclick="openPopup('macetero3D.png', 'Macetero 3D', 'Macetero decorativo impreso en PLA. Ideal para interiores.')">
+            <div class="product-info">
+              <h3>Macetero 3D</h3>
+              <p>Diseño moderno y funcional.</p>
+              <a href="https://wa.me/56938732378?text=Hola,%20me%20interesa%20un%20macetero%203D." class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="pulpitos.jpg" alt="Pulpitos decorativos" class="product-img" onclick="openPopup('pulpitos.jpg', 'Pulpitos Decorativos', 'Juego de pulpos impreso en colores. Perfecto para niños.')">
+            <div class="product-info">
+              <h3>Pulpitos Decorativos</h3>
+              <p>Juguetes o decoración en 3D.</p>
+              <a href="https://wa.me/56938732378?text=Hola,%20me%20interesan%20los%20pulpitos%20decorativos." class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="cadete.jpg" alt="Pieza personalizada" class="product-img" onclick="openPopup('cadete.jpg', 'Pieza Personalizada', 'Diseño único según tu idea o archivo.')">
+            <div class="product-info">
+              <h3>Funko Pop por encargo</h3>
+              <p>Diseños únicos según tu idea o archivo.</p>
+              <a href="https://wa.me/56938732378?text=Hola,%20me%20interesa%20una%20pieza%20personalizada." class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <img src="cajamodulares.jpg" alt="Pieza personalizada" class="product-img" onclick="openPopup('cajamodulares.jpg', 'Pieza Personalizada', 'Diseño único según tu idea o archivo.')">
+            <div class="product-info">
+              <h3>Cajas Modulares</h3>
+              <p>Diseños únicos según tu idea o archivo.</p>
+              <a href="https://wa.me/56938732378?text=Hola,%20me%20interesa%20una%20pieza%20personalizada." class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="maceteros.jpg" alt="Pieza personalizada" class="product-img" onclick="openPopup('maceteros.jpg', 'Pieza Personalizada', 'Diseño único según tu idea o archivo.')">
+            <div class="product-info">
+              <h3>Maceteros segun tu idea</h3>
+              <p>Diseños únicos según tu idea o archivo.</p>
+              <a href="https://wa.me/56938732378?text=Hola,%20me%20interesa%20una%20pieza%20personalizada." class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="portacelu.jpg" alt="Pieza personalizada" class="product-img" onclick="openPopup('portacelu.jpg', 'Pieza Personalizada', 'Diseño único según tu idea o archivo.')">
+            <div class="product-info">
+              <h3>Porta Celular por encargo</h3>
+              <p>Diseños únicos según tu idea o archivo.</p>
+              <a href="https://wa.me/56938732378?text=Hola,%20me%20interesa%20una%20pieza%20personalizada." class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacidad inspirado en WhatsApp -->
+    <section class="section">
+      <div class="container">
+        <div class="privacy-box">
+          <h3>🔐 Privacidad y Seguridad</h3>
+          <p>Tus diseños están seguros. No compartimos ni almacenamos tus archivos. Todo es confidencial.</p>
+        </div>
+      </div>
+    </section>
+
+  
+
+  <!-- Popup de producto -->
+  <div class="popup-overlay" id="imagePopup">
+    <div class="popup">
+      <button class="popup-close" onclick="closePopup()">&times;</button>
+      <div class="popup-image-container">
+        <img id="popupImage" src="" alt="Producto" class="popup-image" />
+      </div>
+      <div class="popup-content">
+        <h3 id="popupTitle"></h3>
+        <p id="popupDescription"></p>
+        <a href="https://wa.me/56938732378?text=Hola,%20me%20interesa%20este%20producto." class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonios -->
+  <section class="section">
+    <div class="container">
+      <h2>Clientes Satisfechos</h2>
+      <div class="testimonials">
+        <p>"Gracias por la pieza de repuesto, funcionó perfecto. ¡Ahora mi máquina vuelve a trabajar!"</p>
+        <p class="testimonial-author">– Carlos, Ingeniero Mecánico</p>
+        <p>"El acabado fue impecable. Recomendado 100% para proyectos universitarios."</p>
+        <p class="testimonial-author">– Valentina, Arquitecta</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup de bienvenida -->
+  <div class="popup-overlay" id="welcomePopup">
+    <div class="popup">
+      <h3>💬 ¡Hola! Bienvenido a CG Impresiones</h3>
+      <p>¿Tienes un diseño 3D listo? Cotízalo en segundos por WhatsApp.</p>
+      <p><small>Como en WhatsApp: privacidad, rapidez y comunicación directa.</small></p>
+      <a href="https://wa.me/56938732378" class="btn-whatsapp" target="_blank">Chatear por WhatsApp</a>
+      <div class="btn-close" onclick="closeWelcomePopup()">No mostrar nuevamente</div>
+    </div>
+  </div>
+
+  <!-- Botón flotante de WhatsApp -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/56938732378" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 CG Impresiones. Todos los derechos reservados.</p>
+      <p>webmasteriquique@gmail.com</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>
